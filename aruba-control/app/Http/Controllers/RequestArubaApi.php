@@ -59,14 +59,13 @@ class RequestArubaApi extends Controller
             
         
 
-        $t = date_default_timezone_set('Asia/Bangkok');
-        $t = date('Y-m-d H:i:s');
-      echo $t;
-        echo "  AP Save Success";
+      echo $ip."<br>";
 
     } catch(\Illuminate\Http\Client\ConnectionException $e) {
-  return false;
+        echo $ip."<br>";
     }
-    }
+    
+}
+
     }
 }
