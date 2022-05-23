@@ -28,8 +28,7 @@ class Kernel extends ConsoleKernel
         //$schedule->call('App\Http\Controllers\StatusController@stu')->hourly();
         //$schedule->call('App\Http\Controllers\DataController@timeline')->everyMinute();
         $schedule->call('App\Http\Controllers\RequestArubaApi@reqaruba')->everyMinute();
-       
-        //$schedule->call('App\Http\Controllers\dropController@drop',['--delay'=> 10])->everyMinutes();
+        $schedule->call('App\Http\Controllers\dropController@drop')->TwoMinute();
         
     }
     

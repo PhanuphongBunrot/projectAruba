@@ -38,6 +38,7 @@ class CheckMasterController extends Controller
         $on = $companydb->online;
         //-------------------------------------//
         //var_dump ($tem);
+       // print_r ($aps);
         $ex = [];
         for ($g = 0 ; $g < count($tem) ;$g++){
             $ex [] = $tem[$g]['Max'];
@@ -144,15 +145,15 @@ class CheckMasterController extends Controller
                     $result = array_diff($db, $ex1,);
                     if (($result[0] != null)) {
                         $tooff[] = $f= $f + 1;
-                        $inser = $off->insertMany([
-                            ['Max' => $result[0],
-                             'Status' => 'Offline',
-                            'd/m/y'=> $d . "/" . $m . "/" . $Y,
-                            'time' => $h . ":" . $min  
-                            ]
+                        // $inser = $off->insertMany([
+                        //     ['Max' => $result[0],
+                        //      'Status' => 'Offline',
+                        //     'd/m/y'=> $d . "/" . $m . "/" . $Y,
+                        //     'time' => $h . ":" . $min  
+                        //     ]
 
 
-                        ]);
+                        // ]);
                         echo ($result[0]) . " " .$data[$z]['Apname']." "."Offline" . " " . $d . "/" . $m . "/" . $Y . " " . $h . ":" . $min  . " ";
                     }
                 }

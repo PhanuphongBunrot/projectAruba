@@ -136,15 +136,15 @@ class ViewonoffController extends Controller
             $result = array_diff($db, $ex,);
             if (($result[0] != null)) {
                 $tooff[] = $f= $f + 1;
-                $inser = $off->insertMany([
-                    ['Max' => $result[0],
-                     'Status' => 'Offline',
-                    'd/m/y'=> $d . "/" . $m . "/" . $Y,
-                    'time' => $h . ":" . $min  
-                    ]
+                // $inser = $off->insertMany([
+                //     ['Max' => $result[0],
+                //      'Status' => 'Offline',
+                //     'd/m/y'=> $d . "/" . $m . "/" . $Y,
+                //     'time' => $h . ":" . $min  
+                //     ]
                     
 
-                ]);
+                // ]);
                 echo ($result[0]) . " " .$data[$z]['Apname']." "."Offline" . " " . $d . "/" . $m . "/" . $Y . " " . $h . ":" . $min  . " ";
             }
         }
